@@ -30,7 +30,6 @@ ko_deps_connv1 = [
     "//vendor/mediatek/kernel_modules/connectivity/wlan/adaptor/build/connac1x:wmt_chrdev_wifi",
     "//vendor/mediatek/kernel_modules/connectivity/common:wmt_drv",
     "//kernel_device_modules-{}/drivers/memory/mediatek:emi-mpu".format(kernel_version),
-    "//kernel_device_modules-{}/drivers/soc/oplus/boot:oplus_bsp_boot_projectinfo".format(kernel_version),
 ]
 srcs_connv1 = [
     "nic/nic_txd_v1.c",
@@ -70,7 +69,6 @@ ko_deps_connv2 = [
     "//vendor/mediatek/kernel_modules/connectivity/connfem:connfem",
     "//vendor/mediatek/kernel_modules/connectivity/conninfra:conninfra",
     "//vendor/mediatek/kernel_modules/connectivity/wlan/adaptor/wlan_page_pool:wlan_page_pool",
-    "//kernel_device_modules-{}/drivers/soc/oplus/boot:oplus_bsp_boot_projectinfo".format(kernel_version),
 ]
 
 srcs_connv2 = [
@@ -512,11 +510,6 @@ local_defines_connv1 = local_defines_common + [
     "__NO_FORTIFY=1",
     "CFG_WIFI_RAM_COEX_SPDT_SHR_ANT_CTRL=0",
     "CFG_MTK_WIFI_SUPPORT_LEGACY_CBMCU_FWDL=0",
-    "OPLUS_FEATURE_WIFI_POWER=1",
-    "OPLUS_FEATURE_WIFI_PWR_LMT=1",
-    "OPLUS_FEATURE_WIFI_VENDOR_FT=1",
-    "OPLUS_FEATURE_ROAMING_OPTIMIZATION=1",
-    "OPLUS_FEATURE_WIFI_SWITCH=1",
 ]
 
 local_defines_connv2 = local_defines_common + [
@@ -878,9 +871,6 @@ local_defines_connv2 = local_defines_common + [
     "CFG_SUPPORT_MBRAIN_WIFI_WKUP_HOST=0",
     "CFG_WIFI_RAM_COEX_SPDT_SHR_ANT_CTRL=0",
     "CFG_MTK_WIFI_SUPPORT_LEGACY_CBMCU_FWDL=0",
-    "OPLUS_FEATURE_WIFI_POWER=1",
-    "OPLUS_FEATURE_WIFI_PWR_LMT=1",
-    "OPLUS_FEATURE_WIFI_SWITCH=1",
 ]
 
 local_defines_connv3 = local_defines_common + [
@@ -1253,11 +1243,6 @@ local_defines_connv3 = local_defines_common + [
     "CFG_WIFI_RAM_COEX_SPDT_SHR_ANT_CTRL=0",
     "CFG_MTK_WIFI_SUPPORT_LEGACY_CBMCU_FWDL=0",
     "OPLUS_WLAN_BUG_STABILITY=1",
-    "OPLUS_FEATURE_WIFI_VENDOR_FT=1",
-    "OPLUS_FEATURE_ROAMING_OPTIMIZATION=1",
-    "OPLUS_FEATURE_CONN_POWER_MONITOR=1",
-    "OPLUS_FEATURE_WIFI_POWER=1",
-    "OPLUS_FEATURE_WIFI_SWITCH=1",
 ] +  ([
     "CFG_SUPPORT_MBRAIN=0",
     "CFG_SUPPORT_MBRAIN_WIFI_WKUP_HOST=0",

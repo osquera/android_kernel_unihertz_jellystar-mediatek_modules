@@ -512,11 +512,9 @@ define_mgk_ddk_ko(
         "//kernel_device_modules-{}/drivers/misc/mediatek/eccci:ccci_md_all".format(kernel_version),
         "//kernel_device_modules-{}/drivers/memory/mediatek:emi-mpu".format(kernel_version),
         #CONNECTIVITY.WIFI.HARDWARE.CUSTOMER_CLK.8991957,2025/4/03, co-clk/xtal co-existence
-        "//kernel_device_modules-{}/drivers/soc/oplus/boot:oplus_bsp_boot_projectinfo".format(kernel_version),
     ],
     local_defines = [
         #"CFG_CONNINFRA_UT_SUPPORT", // Uncomment this line to build test code
-        "OPLUS_FEATURE_CUSTOMER_CLK",
     ],
 )
 
